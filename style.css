@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.calculator {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-screen {
+  width: 100%;
+  height: 80px;
+  background-color: #252525;
+  color: white;
+  border: none;
+  text-align: right;
+  font-size: 2rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  height: 60px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eaeaea;
+}
+
+button.operator {
+  background-color: #f7b731;
+  color: white;
+}
+
+button.equal-sign {
+  background-color: #45aaf2;
+  color: white;
+  grid-column: span 3; /* Tombol = mengambil 3 kolom */
+}
+
+button.all-clear {
+  background-color: #fc5c65;
+  color: white;
+  grid-column: span 3; /* Tombol AC mengambil 3 kolom */
+}
+
+button.zero {
+  grid-column: span 3; /* Tombol 0 mengambil 3 kolom */
+}
+
+button:active {
+  background-color: #d1d8e0;
+}
